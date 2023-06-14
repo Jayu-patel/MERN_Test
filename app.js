@@ -7,9 +7,10 @@ app.use(express.json())
 app.use(require('./router/auth'))
 app.use(cors(
     {
-        origin: "https://calm-licorice-9e4677.netlify.app/post"
+        origin: "*"
     }
 ))
+// https://calm-licorice-9e4677.netlify.app/post
 
 app.get('/',(req,res)=>{
     res.send("hello from home")
